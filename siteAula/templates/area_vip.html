@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Área VIP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 style="text-align:center;">Área VIP</h1>
+    <p>Bem-vindo(a) à Área VIP, {{ username }}!</p>
+    <p>Aqui você pode fazer uploads de arquivos diretamente para Nathan Batista:</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="arquivo">Selecione o arquivo:</label>
+            <input type="file" name="arquivo" id="arquivo" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+    <br>
+    <p><a href="/logout">Logout</a></p>
+</div>
+</body>
+</html>

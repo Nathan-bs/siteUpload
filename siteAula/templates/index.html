@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<h1 style = "text-align: center;">Lista Usuários</h1style></h1>
+<div class="conteainer">
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="/usuario">Cadastrar Usuário</a>
+        </div>
+            <div class="col-xs-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <!--<th>senha</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in usuarios %}
+                        <tr>
+                            <td>{{user.nome}}</td>
+                            <!--<td>{{user.senha}}</td>-->
+                            <td>
+                                <a href="/delete/{{user.id}}">Excluir</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
+    
+</body>
+</html>
